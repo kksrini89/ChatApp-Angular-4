@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Styles go here */
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', Verdana, Arial, sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+* :focus {
+    outline: none;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul .username {
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+ul div {
+    padding-bottom: 7px;
+}
+
+.users li {
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+}
+
+input {
+    border: 1px solid #00b1f7;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+nav {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    left: 0;
+    margin-left: 200px;
+    padding: 10px 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+aside {
+    background-color: #00b1f7;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 200px;
+}
+
+main {
+    margin: 50px 0 50px 200px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    margin-left: 200px;
+    padding: 10px 20px;
+    position: fixed;
+    right: 0;
+}
