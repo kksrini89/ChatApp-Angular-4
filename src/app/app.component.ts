@@ -1,6 +1,5 @@
 import { UserService } from './service/user.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { MessageComponent, NewMessageComponent, UserComponent } from './components/index';
 import { User } from './models/index';
@@ -16,7 +15,7 @@ export class AppComponent implements OnInit {
 
   constructor(private userService: UserService) {
     this.userService.getUsers().subscribe(res => {
-      this.users = res
+      this.users = res;
     },
       err => console.log(err));
   }

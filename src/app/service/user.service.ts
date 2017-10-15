@@ -1,36 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+// import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/catch';
+// import 'rxjs/add/observable/throw';
 
 import { User } from '../models/index';
 
 @Injectable()
 export class UserService {
-  public _url: string = 'http://demo4842709.mockable.io/users';
-  constructor(private _http: Http) { }
+  // public _url: string = 'http://demo4842709.mockable.io/users';
+  public _url: string = 'https://raw.githubusercontent.com/kksrini89/ChatApp-Angular-4/master/src/app/service/users.json';
+  constructor(private _http: HttpClient) { }
 
   /**
    * GET Users
    */
-  getUsers() {
+  getUsers(): Observable<User[]> {
     // return this._http.get(this._url).map(res => res.json());
-    return this._http.get(this._url)
-      .map(this.extractData)
-      .catch(this.handleError);
-  }
-
-  private extractData(res: Response) {
-    // return JSON.parse(JSON.stringify(res.json() || null))
-    return res || [];
-    // let body = res.json();
-    // console.log(body);
-    // return body || [];
-  }
-
-  private handleError(err: Response) {
-    return Observable.throw(err.json().error || 'Server error');
+    return this._http.get<User[]>(this._url);
   }
 }
