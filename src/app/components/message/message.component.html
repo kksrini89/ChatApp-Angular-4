@@ -1,5 +1,10 @@
-<ul class="messages">
-  <li>
+<div id="message_body">
+  <ul class="messages" *ngIf="messageArray.length > 0;else noMessageContent">
+    <li *ngFor="let msg of messageArray">
+      {{msg.text}}
+    </li>
+
+    <!-- <li>
     <div class="username">
       gwen.demarco
     </div>
@@ -17,5 +22,12 @@
     <div class="message">
       For all you know, I'm "Crewman Number Six"!
     </div>
-  </li>
-</ul>
+  </li> -->
+  </ul>
+
+  <ng-template #noMessageContent>
+    <ul class="nomessage">
+      <li>No message available.</li>
+    </ul>
+  </ng-template>
+</div>

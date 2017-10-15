@@ -1,0 +1,24 @@
+div#message_body{
+    /* background-color: #D9D9D9; */
+}
+
+ul.messages{
+    margin-top: 20px;
+}
+
+ul.messages li{
+padding: 20px;
+}
+
+ul.messages li:hover{
+    background-color: lightblue;
+}
+
+ul.nomessage{
+    width: 100%;
+    margin: auto;
+}
+
+ul.nomessage li{    
+    margin:15%;
+}

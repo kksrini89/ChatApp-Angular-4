@@ -29,10 +29,10 @@
 
 <div class="container-fluid">
   <aside>
-    <user [Users]="users"></user>
+    <user [Users]="users" (ChangedUserEvent)="OnChangedUser($event)"></user>
   </aside>
   <main>
-    <message></message>
+    <message [messageArray]="messages"></message>
   </main>
   <footer>
     <new-message></new-message>

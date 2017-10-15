@@ -17,7 +17,6 @@ export class UserService {
    * GET Users
    */
   getUsers(): Observable<User[]> {
-    // return this._http.get(this._url).map(res => res.json());
     return this._http.get<User[]>(this._url);
   }
 }

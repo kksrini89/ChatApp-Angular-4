@@ -1,6 +1,5 @@
-<div>USERS</div>
 <ul class="users">
-  <li *ngFor="let user of UsersList">
-    {{user.user}} - {{user.img}}
+  <li *ngFor="let user of UsersList;let i=index" (click)="OnChangedUser(user)">
+    <img src="{{user.img}}" alt="ProfileImage" class="img-circle"> {{user.user}}
   </li>
 </ul>

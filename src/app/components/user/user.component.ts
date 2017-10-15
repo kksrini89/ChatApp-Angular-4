@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
-import { User } from '../../models/index';
+import { User, Message } from '../../models/index';
 
 @Component({
   selector: 'user',
@@ -11,7 +11,13 @@ export class UserComponent implements OnInit {
 
   @Input('Users') UsersList: User[];
 
+  @Output() ChangedUserEvent: EventEmitter<Message[]> = new EventEmitter<Message[]>();
+
   constructor() { }
+
+  OnChangedUser(user: User) {
+    this.ChangedUserEvent.emit(user.messages);
+  }
 
   ngOnInit() {
   }
