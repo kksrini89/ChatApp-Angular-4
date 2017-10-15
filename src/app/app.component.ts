@@ -12,11 +12,16 @@ import { User } from './models/index';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  users: Array<User>;
-  
-  constructor(private userService: UserService) { }
+  users: User[];
+
+  constructor(private userService: UserService) {
+    this.userService.getUsers().subscribe(res => {
+      this.users = res
+    },
+      err => console.log(err));
+  }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe((res) => this.users = res);
+
   }
 }

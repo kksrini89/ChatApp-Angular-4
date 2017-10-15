@@ -2,7 +2,7 @@ export interface User {
     id: string;
     user: string;
     img: string;
-    messages: Array<Message>;
+    messages: Message[];
 }
 
 export interface Message {
