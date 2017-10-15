@@ -1,5 +1,5 @@
 <div id="message_body">
-  <ul class="messages" *ngIf="messageArray.length > 0;else noMessageContent">
+  <ul class="messages" *ngIf="isMessageExists;else noMessageContent">
     <li *ngFor="let msg of messageArray">
       {{msg.text}}
     </li>

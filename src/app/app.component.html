@@ -32,7 +32,7 @@
     <user [Users]="users" (ChangedUserEvent)="OnChangedUser($event)"></user>
   </aside>
   <main>
-    <message [messageArray]="messages"></message>
+    <message [messageArray]="messages" [isMessageExists]="isMessageExists"></message>
   </main>
   <footer>
     <new-message></new-message>

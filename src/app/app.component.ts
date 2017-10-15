@@ -13,11 +13,13 @@ import { User, Message } from './models/index';
 export class AppComponent implements OnInit {
   users: User[];
   messages: Message[];
+  isMessageExists: boolean;
 
   constructor(private userService: UserService) {
     this.userService.getUsers().subscribe(res => {
       this.users = res;
       this.messages = this.users[0].messages;
+      this.isMessageExists = (this.messages.length > 0) ? true : false;
     },
       err => console.log(err));
   }
@@ -25,6 +27,7 @@ export class AppComponent implements OnInit {
   OnChangedUser(data: Message[]) {
     console.log(data);
     this.messages = data;
+    this.isMessageExists = (this.messages.length > 0) ? true : false;
   }
 
   ngOnInit() {

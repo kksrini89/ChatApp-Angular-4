@@ -11,11 +11,13 @@ export class MessageComponent implements OnInit {
 
   @Input() messageArray: Message[];
 
+  @Input() isMessageExists: boolean = false;
+
   constructor() {
 
   }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
 
 }
