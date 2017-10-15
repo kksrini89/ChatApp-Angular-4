@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 
   OnChangedUser(data: Message[]) {
-    console.log(data);
+    // console.log(data);
     this.messages = data;
     this.isMessageExists = (this.messages.length > 0) ? true : false;
   }

@@ -4,6 +4,7 @@ ul.messages{
 
 ul.messages li{
 padding: 20px;
+font-family: 'Ubuntu', sans-serif;
 }
 
 ul.messages li:hover{

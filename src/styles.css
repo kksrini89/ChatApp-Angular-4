@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 /* Styles go here */
 
@@ -43,6 +43,7 @@ ul div {
     overflow: hidden;
     padding: 5px 10px;
     text-overflow: ellipsis;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 input {

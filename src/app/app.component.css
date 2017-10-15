@@ -1,0 +1,13 @@
+div#navbar ul:nth-child(1) li:nth-child(2) div{
+color: #333;
+font-size: 18px;
+text-transform: uppercase;
+margin-top: 10px;
+margin-left: 400px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.rightLinks{
+margin-right: 20px !important;
+font-family: 'Ubuntu', sans-serif;
+}
