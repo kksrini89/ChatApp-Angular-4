@@ -1,9 +1,15 @@
 ul.users li{
     padding: 10%;
+    transition:all 0.1s ease-in-out;
 }
 
 ul.users li:hover{
+    padding: 10% 2%;
     cursor: pointer;
+    color:#333;
+    background-color: #FFF;
+    border: 1px solid #d9d9d9;
+    transform: scale(1,1.1);
 }
 
 ul.users img{
